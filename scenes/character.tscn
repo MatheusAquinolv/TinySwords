@@ -1,7 +1,7 @@
 [gd_scene load_steps=23 format=3 uid="uid://h0y8qxns2o71"]
 
 [ext_resource type="Script" path="res://scenes/character.gd" id="1_2grmx"]
-[ext_resource type="Texture2D" uid="uid://cmayrlsl5a1wo" path="res://Tiny Swords/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_pej8g"]
+[ext_resource type="Texture2D" uid="uid://cmayrlsl5a1wo" path="res://Assets/Tiny Swords (Update 010)/Factions/Knights/Troops/Warrior/Blue/Warrior_Blue.png" id="1_pej8g"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_gd1ij"]
 atlas = ExtResource("1_pej8g")
@@ -148,8 +148,8 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ogp1a"]
-radius = 17.0
-height = 60.0
+radius = 13.0
+height = 36.0
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_2grmx")
@@ -157,10 +157,8 @@ script = ExtResource("1_2grmx")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_liklg")
-animation = &"swipe_sword_down"
 autoplay = "default"
-frame_progress = 0.675629
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 3)
+position = Vector2(0, 14)
 shape = SubResource("CapsuleShape2D_ogp1a")
